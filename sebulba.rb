@@ -9,7 +9,11 @@ class Sebulba < Formula
 
 
   def install
-    system 'cp sebulba /usr/local/bin/'
+    bin.install sebulba
+  end
+
+  test do
+    system "#{bin}/sebulba", "--help"
   end
 
 end
